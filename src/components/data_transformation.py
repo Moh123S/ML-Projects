@@ -23,7 +23,10 @@ class DataTransformation:
         self.data_transformation_config=DataTransformationConfig()
 
     def get_data_transformer_object(self):
+        '''
+        This function si responsible for data trnasformation
         
+        '''
         try:
             numerical_columns = ["writing_score", "reading_score"]
             categorical_columns = [
@@ -119,7 +122,3 @@ class DataTransformation:
             )
         except Exception as e:
             raise CustomException(e,sys)
-
-
-
-        
